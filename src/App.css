@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+:root {
+  --family: 'Space Mono', monospace;
+  --dark-cyan: #00494d;
+  --light-cyan: #e1f2f2;
+  --strong-cyan: #26c0ab;
+  --hover-color: #01686e;
+}
+
+body {
+  font-family: var(--family);
+  background: #abdcf5;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+#input-container {
+  border-radius: 5px;
+  background-color: var(--light-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#input-container > div{
+  margin: 4px;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 5px;
+  -moz-appearance:textfield;
+  background-color: transparent;
+  border: none;
+  font-family: var(--family);
+  font-weight: bold;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+.calculator {
+  background: white;
+  width: 42rem;
+  height: 20rem;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(40%);
+}
+
+
+
+.calculator > div {
+  margin: 2rem;
+  height: 80%;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-basis: -moz-available;
+}
+
+#form > div > * {
+  margin-bottom: 8px;
+}
+
+#form > div:first-child , #form > div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+}
+
+#data {
+  background: var(--dark-cyan);
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+
+  .calculator {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    transform: translateY(0);
+  }
+
+  #data {
+    width: 80%;
+  }
+
+  #form {
+    width: 80%;
+  }
+
+
+}
+
+
+
+
+#data > button {
+  border: none;
+  background-color: var(--strong-cyan);
+  padding-top: 10px;
+  font-family: var(--family);
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  margin: 1.5rem;
+}
+
+#data > button:hover {
+  background-color: #139c89;
+}
+
+#tip {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+#tip > div > p:first-child {
+  font-size: 13px;
+  color: white;
+}
+
+#tip > div > p:nth-child(2){
+  font-size: 11px;
+  color: lightgray;
+}
+
+#tip > div:nth-child(2) > span {
+  font-size: 25px;
+  color: var(--strong-cyan);
+  font-weight: bold;
+}
+
+#rates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#rates > button {
+  font-family: var(--family);
+  border: none;
+  color: white;
+  background-color: var(--dark-cyan);
+  padding: 10px;
+  font-size: 18px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+#rates > button:hover {
+  background-color: var(--hover-color);
+}
+
+#rates > button:last-child{
+  background-color: var(--strong-cyan);
+  color: var(--dark-cyan);
+}
